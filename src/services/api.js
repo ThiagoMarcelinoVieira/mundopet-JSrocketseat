@@ -30,3 +30,16 @@ export async function scheduleCreate({ id, petName, ownerName, description, date
     alert("Não foi possível agendar. Tente novamente mais tarde.")
   }
 }
+
+export async function scheduleCancel({ id }) {
+  try {
+    await fetch(`${apiConfig.baseURL}/schedules/${id}`, {
+      method: "DELETE",
+    })
+
+    alert("Agendamento cancelado com sucesso!")
+  } catch (error) {
+    console.error("Erro ao cancelar agendamento:", error)
+    alert("Não foi possível cancelar o agendamento.")
+  }
+}

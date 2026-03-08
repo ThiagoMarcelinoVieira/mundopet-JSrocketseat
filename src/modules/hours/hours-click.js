@@ -16,7 +16,6 @@ export function hoursClick() {
     
     if (selectedHour) {
       selectHora.classList.add("selected")
-      console.log("Horário selecionado:", selectedHour)
     }
   })
 }
