@@ -1,5 +1,5 @@
 export default {
   build: {
-    outDir: 'src/public'
+    outDir: 'public'
   }
 }
