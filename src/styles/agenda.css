@@ -1,0 +1,270 @@
+.agenda-page {
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: var(--space-2xl);
+}
+
+.agenda-page__container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+/* ── Header ── */
+.agenda-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.agenda-header__title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--clr-text-primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.agenda-header__subtitle {
+  font-size: 14px;
+  color: var(--clr-text-secondary);
+  font-weight: 400;
+}
+
+.date-picker-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--clr-text-primary);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.date-picker-btn:hover {
+  background: var(--clr-surface-hover);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.date-picker-btn__icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.date-picker-btn__chevron {
+  font-size: 12px;
+  color: var(--clr-text-muted);
+  margin-left: 2px;
+}
+
+.agenda-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.time-section {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.time-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--clr-border-soft);
+}
+
+.time-section__label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--clr-text-primary);
+}
+
+.time-section__emoji {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.time-section__range {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--clr-text-muted);
+  font-weight: 400;
+}
+
+.appointment-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 14px var(--space-lg);
+  border-bottom: 1px solid var(--clr-border-soft);
+  transition: background var(--transition-fast);
+}
+
+.appointment-item:last-child {
+  border-bottom: none;
+}
+
+.appointment-item:hover {
+  background: var(--clr-card);
+}
+
+.appointment-item__time {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--clr-text-primary);
+  white-space: nowrap;
+}
+
+.appointment-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.appointment-item__names {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--clr-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appointment-item__names .pet-name {
+  color: var(--clr-text-primary);
+}
+
+.appointment-item__names .separator {
+  color: var(--clr-text-muted);
+  margin: 0 2px;
+  font-weight: 400;
+}
+
+.appointment-item__names .owner-name {
+  color: var(--clr-text-secondary);
+  font-weight: 400;
+}
+
+.appointment-item__service {
+  font-size: 13px;
+  color: var(--clr-text-secondary);
+}
+
+.appointment-item__remove {
+  font-size: 13px;
+  color: var(--clr-text-muted);
+  font-weight: 400;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  padding: 4px 0;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.appointment-item__remove:hover {
+  color: var(--clr-text-danger);
+}
+
+.appointment-empty {
+  padding: var(--space-lg);
+  text-align: center;
+  font-size: 13px;
+  color: var(--clr-text-muted);
+}
+
+.fab-novo {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--clr-accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-accent);
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+  z-index: 50;
+}
+
+.fab-novo:hover {
+  background: var(--clr-accent-hover);
+  box-shadow: 0 6px 30px rgba(124, 111, 247, 0.5);
+  transform: translateY(-2px);
+}
+
+.fab-novo:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .agenda-page__container {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .agenda-header {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+
+  .appointment-item {
+    grid-template-columns: 52px 1fr;
+    gap: var(--space-sm);
+  }
+
+  .appointment-item__remove {
+    display: none;
+  }
+
+  .appointment-item:hover .appointment-item__remove {
+    display: block;
+  }
+
+  .fab-novo {
+    bottom: var(--space-md);
+    right: var(--space-md);
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+}

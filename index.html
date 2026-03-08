@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mundo Pet - Agenda</title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <div class="navbar__inner">
+        <img src="src/assets/logo.png" alt="Mundo Pet" id="logo" />
+      </div>
+    </nav>
+
+    <main class="agenda-page">
+      <div class="agenda-page__container">
+        <header class="agenda-header">
+          <div class="agenda-header__copy">
+            <h1 class="agenda-header__title">Sua agenda</h1>
+            <p class="agenda-header__subtitle">
+              Aqui você pode ver todos os clientes e serviços agendados para
+              hoje.
+            </p>
+          </div>
+
+          <button
+            class="date-picker-btn"
+            id="datePickerBtn"
+            aria-label="Selecionar data"
+            type="button"
+          >
+            <img src="src/assets/calendar.svg" alt="" />
+            <span class="date-picker-btn__label" id="datePickerLabel"
+              >10/01/2024</span
+            >
+            <span class="date-picker-btn__chevron" aria-hidden="true">▾</span>
+          </button>
+        </header>
+
+        <div class="agenda-sections" id="agendaSections">
+          <!-- ── Manhã ── -->
+          <section class="time-section" aria-labelledby="secManha">
+            <div class="time-section__header">
+              <span class="time-section__label" id="secManha">
+                <img src="src/assets/morning.svg" alt="" />
+                Manhã
+              </span>
+              <span class="time-section__range">09h–12h</span>
+            </div>
+
+            <ul
+              class="appointment-list"
+              id="listManha"
+              aria-label="Agendamentos da manhã"
+            >
+              <li class="appointment-item">
+                <span class="appointment-item__time">09:00</span>
+                <div class="appointment-item__info">
+                  <span class="appointment-item__names">
+                    <span class="pet-name">Thor</span>
+                    <span class="separator">/</span>
+                    <span class="owner-name">Fernanda Costa</span>
+                  </span>
+                  <span class="appointment-item__service">Vacinação</span>
+                </div>
+                <button
+                  class="appointment-item__remove"
+                  type="button"
+                  aria-label="Remover agendamento de Thor"
+                >
+                  Remover agendamento
+                </button>
+              </li>
+            </ul>
+          </section>
+
+          <!-- ── Tarde ── -->
+          <section class="time-section" aria-labelledby="secTarde">
+            <div class="time-section__header">
+              <span class="time-section__label" id="secTarde">
+                <img src="src/assets/afternoon.svg" alt="" />
+                Tarde
+              </span>
+              <span class="time-section__range">13h–18h</span>
+            </div>
+
+            <ul
+              class="appointment-list"
+              id="listTarde"
+              aria-label="Agendamentos da tarde"
+            >
+              <li class="appointment-item">
+                <span class="appointment-item__time">13:00</span>
+                <div class="appointment-item__info">
+                  <span class="appointment-item__names">
+                    <span class="pet-name">Mel</span>
+                    <span class="separator">/</span>
+                    <span class="owner-name">João Souza</span>
+                  </span>
+                  <span class="appointment-item__service">Corte de Unhas</span>
+                </div>
+                <button
+                  class="appointment-item__remove"
+                  type="button"
+                  aria-label="Remover agendamento de Mel"
+                >
+                  Remover agendamento
+                </button>
+              </li>
+
+              <li class="appointment-item">
+                <span class="appointment-item__time">14:00</span>
+                <div class="appointment-item__info">
+                  <span class="appointment-item__names">
+                    <span class="pet-name">Bella</span>
+                    <span class="separator">/</span>
+                    <span class="owner-name">Pedro Martins</span>
+                  </span>
+                  <span class="appointment-item__service"
+                    >Aplicação de Anti-pulgas</span
+                  >
+                </div>
+                <button
+                  class="appointment-item__remove"
+                  type="button"
+                  aria-label="Remover agendamento de Bella"
+                >
+                  Remover agendamento
+                </button>
+              </li>
+
+              <li class="appointment-item">
+                <span class="appointment-item__time">15:00</span>
+                <div class="appointment-item__info">
+                  <span class="appointment-item__names">
+                    <span class="pet-name">Simba</span>
+                    <span class="separator">/</span>
+                    <span class="owner-name">Juliana Rocha</span>
+                  </span>
+                  <span class="appointment-item__service">Tosa Higiênica</span>
+                </div>
+                <button
+                  class="appointment-item__remove"
+                  type="button"
+                  aria-label="Remover agendamento de Simba"
+                >
+                  Remover agendamento
+                </button>
+              </li>
+            </ul>
+          </section>
+
+          <!-- ── Noite ── -->
+          <section class="time-section" aria-labelledby="secNoite">
+            <div class="time-section__header">
+              <span class="time-section__label" id="secNoite">
+                <img src="src/assets/night.svg" alt="" />
+                Noite
+              </span>
+              <span class="time-section__range">19h–21h</span>
+            </div>
+
+            <ul
+              class="appointment-list"
+              id="listNoite"
+              aria-label="Agendamentos da noite"
+            >
+              <li class="appointment-item">
+                <span class="appointment-item__time">20:00</span>
+                <div class="appointment-item__info">
+                  <span class="appointment-item__names">
+                    <span class="pet-name">Max</span>
+                    <span class="separator">/</span>
+                    <span class="owner-name">Camila Santos</span>
+                  </span>
+                  <span class="appointment-item__service"
+                    >Limpeza de Dentes</span
+                  >
+                </div>
+                <button
+                  class="appointment-item__remove"
+                  type="button"
+                  aria-label="Remover agendamento de Max"
+                >
+                  Remover agendamento
+                </button>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <button
+      class="fab-novo"
+      id="openModalBtn"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="agendamentoModal"
+    >
+      Novo Agendamento
+    </button>
+
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal" id="agendamentoModal">
+        <div class="modal__header">
+          <h2 class="modal__title" id="modalTitle">Agende um atendimento</h2>
+          <p class="modal__subtitle">
+            Preencha os dados do cliente para realizar o agendamento:
+          </p>
+        </div>
+
+        <div class="modal__form" id="agendamentoForm" novalidate>
+          <!-- Nome do tutor -->
+          <div class="form-field">
+            <label class="form-field__label" for="inputTutor"
+              >Nome do tutor</label
+            >
+            <div class="input-wrapper">
+              <span class="input-wrapper__icon" aria-hidden="true">👤</span>
+              <input
+                class="form-input"
+                type="text"
+                id="inputTutor"
+                name="tutor"
+                placeholder="Helena Souza"
+                autocomplete="name"
+              />
+            </div>
+          </div>
+
+          <!-- Nome do pet -->
+          <div class="form-field">
+            <label class="form-field__label" for="inputPet">Nome do pet</label>
+            <div class="input-wrapper">
+              <span class="input-wrapper__icon" aria-hidden="true">🐾</span>
+              <input
+                class="form-input"
+                type="text"
+                id="inputPet"
+                name="pet"
+                placeholder="Cheddar"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <!-- Telefone -->
+          <div class="form-field">
+            <label class="form-field__label" for="inputTelefone"
+              >Telefone</label
+            >
+            <div class="input-wrapper">
+              <span class="input-wrapper__icon" aria-hidden="true">📞</span>
+              <input
+                class="form-input"
+                type="tel"
+                id="inputTelefone"
+                name="telefone"
+                placeholder="(00) 0 0000-0000"
+                autocomplete="tel"
+              />
+            </div>
+          </div>
+
+          <!-- Descrição do serviço -->
+          <div class="form-field">
+            <label class="form-field__label" for="inputServico"
+              >Descrição do serviço</label
+            >
+            <div class="input-wrapper input-wrapper--textarea">
+              <span class="input-wrapper__icon" aria-hidden="true">✂️</span>
+              <textarea
+                class="form-input form-input--textarea"
+                id="inputServico"
+                name="servico"
+                placeholder="Banho e tosa"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Data e Hora -->
+          <div class="modal__row">
+            <!-- Data -->
+            <div class="form-field">
+              <label class="form-field__label" for="inputData">Data</label>
+              <div class="select-wrapper">
+                <span class="select-wrapper__icon" aria-hidden="true">📅</span>
+                <select class="form-select" id="inputData" name="data">
+                  <option value="10/01/2024" selected>10/01/2024</option>
+                </select>
+                <span class="select-wrapper__chevron" aria-hidden="true"
+                  >▾</span
+                >
+              </div>
+            </div>
+
+            <!-- Hora -->
+            <div class="form-field">
+              <label class="form-field__label" for="inputHora">Hora</label>
+              <div class="select-wrapper">
+                <span class="select-wrapper__icon" aria-hidden="true">🕐</span>
+                <select class="form-select" id="inputHora" name="hora">
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00" selected>12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                  <option value="21:00">21:00</option>
+                </select>
+                <span class="select-wrapper__chevron" aria-hidden="true"
+                  >▾</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="modal__actions">
+            <button class="btn-agendar" id="btnAgendar" type="button">
+              Agendar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="src/main.js" defer></script>
+  </body>
+</html>
