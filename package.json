@@ -6,11 +6,13 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "json-server server.json --host 0.0.0.0 --port 10000 --static ."
+    "server": "json-server server.json --host 0.0.0.0 --port ${PORT:-3333}",
+    "start": "npm run build && json-server server.json --host 0.0.0.0 --port 10000"
   },
   "dependencies": {
     "dayjs": "^1.11.19",
-    "json-server": "^1.0.0-beta.12"
+    "json-server": "^1.0.0-beta.12",
+    "vite": "^6.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
