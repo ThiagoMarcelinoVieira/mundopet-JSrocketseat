@@ -15,7 +15,7 @@
   transition: opacity var(--transition-normal);
 }
 
-.modal-overlay.is-open {
+.modal-overlay.active {
   opacity: 1;
   pointer-events: all;
 }
@@ -35,7 +35,13 @@
   transition: transform var(--transition-normal);
 }
 
-.modal-overlay.is-open .modal {
+.modal img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: .5rem;
+}
+
+.modal-overlay.active .modal {
   transform: translateY(0) scale(1);
 }
 
@@ -102,7 +108,7 @@
   background: var(--clr-card);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
-  padding: 12px 14px 12px 42px;
+  padding: 12px 14px 12px;
   font-size: 14px;
   font-weight: 400;
   color: var(--clr-text-primary);
@@ -121,6 +127,30 @@
   outline: none;
   box-shadow: 0 0 0 3px var(--clr-accent-soft);
 }
+
+/* --- INÍCIO: NOVOS ESTILOS DO INPUT DE DATA --- */
+.form-input--date {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  font-family: inherit;
+  /* Sobrescreve o padding padrão para dar espaço aos nossos ícones customizados */
+  padding: 12px 36px 12px 42px; 
+}
+
+/* Esconde o ícone nativo do calendário, mas deixa a área clicável */
+.form-input--date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+/* --- FIM: NOVOS ESTILOS DO INPUT DE DATA --- */
 
 .form-input--textarea {
   resize: vertical;
@@ -150,6 +180,18 @@
   pointer-events: none;
 }
 
+/* --- INÍCIO: ÍCONE CUSTOMIZADO DO CALENDÁRIO --- */
+.select-wrapper__icon-left {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+  width: 16px;
+}
+/* --- FIM --- */
+
 .select-wrapper__chevron {
   position: absolute;
   right: 14px;
@@ -158,6 +200,10 @@
   font-size: 11px;
   color: var(--clr-text-muted);
   pointer-events: none;
+  
+  /* Adições para sobrepor o input nativo */
+  z-index: 10;
+  width: 12px; 
 }
 
 .form-select {
@@ -167,7 +213,7 @@
   background: var(--clr-card);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
-  padding: 12px 36px 12px 42px;
+  padding: 12px 36px 12px;
   font-size: 14px;
   font-weight: 400;
   color: var(--clr-text-primary);

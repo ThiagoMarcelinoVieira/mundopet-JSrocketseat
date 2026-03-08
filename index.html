@@ -24,18 +24,27 @@
             </p>
           </div>
 
-          <button
-            class="date-picker-btn"
-            id="datePickerBtn"
-            aria-label="Selecionar data"
-            type="button"
-          >
-            <img src="src/assets/calendar.svg" alt="" />
-            <span class="date-picker-btn__label" id="datePickerLabel"
-              >10/01/2024</span
-            >
-            <span class="date-picker-btn__chevron" aria-hidden="true">▾</span>
-          </button>
+          <div class="select-wrapper">
+            <img
+              src="src/assets/icons/calendar.svg"
+              alt=""
+              class="select-wrapper__icon-left"
+              aria-hidden="true"
+            />
+
+            <input
+              type="date"
+              id="inputData"
+              class="form-input form-input--date"
+            />
+
+            <img
+              src="src/assets/icons/arrow-down.svg"
+              alt=""
+              class="select-wrapper__chevron"
+              aria-hidden="true"
+            />
+          </div>
         </header>
 
         <div class="agenda-sections" id="agendaSections">
@@ -225,13 +234,13 @@
               >Nome do tutor</label
             >
             <div class="input-wrapper">
-              <span class="input-wrapper__icon" aria-hidden="true">👤</span>
+              <img src="src/assets/icons/user.svg" alt="" />
               <input
                 class="form-input"
                 type="text"
                 id="inputTutor"
                 name="tutor"
-                placeholder="Helena Souza"
+                placeholder="Thiago Marcelino Vieira"
                 autocomplete="name"
               />
             </div>
@@ -241,7 +250,7 @@
           <div class="form-field">
             <label class="form-field__label" for="inputPet">Nome do pet</label>
             <div class="input-wrapper">
-              <span class="input-wrapper__icon" aria-hidden="true">🐾</span>
+              <img src="src/assets/icons/paw.svg" alt="" />
               <input
                 class="form-input"
                 type="text"
@@ -259,7 +268,7 @@
               >Telefone</label
             >
             <div class="input-wrapper">
-              <span class="input-wrapper__icon" aria-hidden="true">📞</span>
+              <img src="src/assets/icons/phone.svg" alt="" />
               <input
                 class="form-input"
                 type="tel"
@@ -277,7 +286,6 @@
               >Descrição do serviço</label
             >
             <div class="input-wrapper input-wrapper--textarea">
-              <span class="input-wrapper__icon" aria-hidden="true">✂️</span>
               <textarea
                 class="form-input form-input--textarea"
                 id="inputServico"
@@ -292,15 +300,27 @@
           <div class="modal__row">
             <!-- Data -->
             <div class="form-field">
-              <label class="form-field__label" for="inputData">Data</label>
+              <label class="form-field__label" for="inputData2">Data</label>
               <div class="select-wrapper">
-                <span class="select-wrapper__icon" aria-hidden="true">📅</span>
-                <select class="form-select" id="inputData" name="data">
-                  <option value="10/01/2024" selected>10/01/2024</option>
-                </select>
-                <span class="select-wrapper__chevron" aria-hidden="true"
-                  >▾</span
-                >
+                <img
+                  src="src/assets/icons/calendar.svg"
+                  alt=""
+                  class="select-wrapper__icon-left"
+                  aria-hidden="true"
+                />
+
+                <input
+                  type="date"
+                  id="inputData2"
+                  class="form-input form-input--date"
+                />
+
+                <img
+                  src="src/assets/icons/arrow-down.svg"
+                  alt=""
+                  class="select-wrapper__chevron"
+                  aria-hidden="true"
+                />
               </div>
             </div>
 
@@ -308,25 +328,16 @@
             <div class="form-field">
               <label class="form-field__label" for="inputHora">Hora</label>
               <div class="select-wrapper">
-                <span class="select-wrapper__icon" aria-hidden="true">🕐</span>
+                <img src="src/assets/icons/clock.svg" alt="" />
                 <select class="form-select" id="inputHora" name="hora">
-                  <option value="09:00">09:00</option>
-                  <option value="10:00">10:00</option>
-                  <option value="11:00">11:00</option>
-                  <option value="12:00" selected>12:00</option>
-                  <option value="13:00">13:00</option>
-                  <option value="14:00">14:00</option>
-                  <option value="15:00">15:00</option>
-                  <option value="16:00">16:00</option>
-                  <option value="17:00">17:00</option>
-                  <option value="18:00">18:00</option>
-                  <option value="19:00">19:00</option>
-                  <option value="20:00">20:00</option>
-                  <option value="21:00">21:00</option>
+
                 </select>
-                <span class="select-wrapper__chevron" aria-hidden="true"
-                  >▾</span
-                >
+                <img
+                  src="src/assets/icons/arrow-down.svg"
+                  alt=""
+                  class="select-wrapper__chevron"
+                  aria-hidden="true"
+                />
               </div>
             </div>
           </div>
@@ -340,6 +351,6 @@
       </div>
     </div>
 
-    <script type="module" src="src/main.js" defer></script>
+    <script src="./main.js" defer></script>
   </body>
 </html>
