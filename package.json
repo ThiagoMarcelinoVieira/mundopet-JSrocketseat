@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "json-server server.json --host 0.0.0.0 --port ${PORT:-3333}"
+    "start": "json-server server.json --host 0.0.0.0 --port 10000 --static ."
   },
   "dependencies": {
     "dayjs": "^1.11.19",
