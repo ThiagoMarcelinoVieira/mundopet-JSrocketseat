@@ -19,7 +19,7 @@ Neste projeto, foquei em aplicar conceitos avançados de desenvolvimento:
 - **UX/UI:** Máscaras de entrada (telefone), validação de formulários e acessibilidade (ARIA).
 - **Lógica de Negócio:** Filtros dinâmicos baseados no calendário e bloqueio de datas retroativas.
 
-## 🛠️ Como rodar o projeto
+## 🛠️ Como rodar o projeto localmente
 
 Para testar o projeto localmente, siga os passos abaixo:
 
