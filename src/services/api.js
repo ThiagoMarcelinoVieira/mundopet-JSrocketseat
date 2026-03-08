@@ -1,11 +1,11 @@
 // src/services/api.js
-export const apiConfig = {
-  baseURL: "http://localhost:3333",
-}
+const baseURL = window.location.hostname === 'localhost'
+  ? 'http://localhost:3333'
+  : 'https://mundopet-api-i378.onrender.com'
 
 export async function fetchSchedules({ date }) {
   try {
-    const response = await fetch(`${apiConfig.baseURL}/schedules?date=${date}`)
+    const response = await fetch(`${baseURL}/schedules?date=${date}`)
     const data = await response.json()
     return data
   } catch (error) {
@@ -16,7 +16,7 @@ export async function fetchSchedules({ date }) {
 
 export async function scheduleCreate({ id, petName, ownerName, description, date, hour }) {
   try {
-    await fetch(`${apiConfig.baseURL}/schedules`, {
+    await fetch(`${baseURL}/schedules`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export async function scheduleCreate({ id, petName, ownerName, description, date
 
 export async function scheduleCancel({ id }) {
   try {
-    await fetch(`${apiConfig.baseURL}/schedules/${id}`, {
+    await fetch(`${baseURL}/schedules/${id}`, {
       method: "DELETE",
     })
 
