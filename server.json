@@ -1,1 +1,77 @@
-{}
+{
+  "schedules": [
+    {
+      "id": "1",
+      "petName": "Thor",
+      "ownerName": "Fernanda Costa",
+      "description": "Vacinação",
+      "date": "2026-03-08",
+      "hour": "09:00"
+    },
+    {
+      "id": "2",
+      "petName": "Mel",
+      "ownerName": "João Souza",
+      "description": "Corte de Unhas",
+      "date": "2026-03-08",
+      "hour": "13:00"
+    },
+    {
+      "id": "1772978737824",
+      "petName": "Cheddar",
+      "ownerName": "Thiago",
+      "description": "Banho e tosa",
+      "date": "2026-03-08",
+      "hour": "19:00"
+    },
+    {
+      "id": "1772978737825",
+      "petName": "Cheddar",
+      "ownerName": "Thiago",
+      "description": "Banho e tosa",
+      "date": "2026-03-08",
+      "hour": "19:00"
+    },
+    {
+      "id": "1772978759256",
+      "petName": "Cheddar",
+      "ownerName": "Thiago",
+      "description": "Banho e tosa",
+      "date": "2026-03-08",
+      "hour": "20:00"
+    },
+    {
+      "id": "1772978759256",
+      "petName": "Cheddar",
+      "ownerName": "Thiago",
+      "description": "Banho e tosa",
+      "date": "2026-03-08",
+      "hour": "20:00"
+    },
+    {
+      "id": "1772979084018",
+      "petName": "Auau",
+      "ownerName": "Gabriel",
+      "description": "Tosa",
+      "date": "2026-03-08",
+      "hour": "11:00"
+    },
+    {
+      "id": "1772979240504",
+      "petName": "Amora",
+      "ownerName": "Rafaella",
+      "description": "Banho",
+      "date": "2026-03-08",
+      "hour": "14:00"
+    },
+    {
+      "id": "1772979784127",
+      "petName": "Minguado",
+      "ownerName": "Andréia",
+      "description": "Banho e tosa",
+      "date": "2026-03-08",
+      "hour": "16:00"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

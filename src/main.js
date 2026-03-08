@@ -12,6 +12,7 @@ import "./styles/modal.css"
 import "./modules/modal.js"
 import { hoursLoad } from "./modules/hours/hours-load.js"
 import { hoursClick } from "./modules/hours/hours-click.js"
+import "./modules/form.js"
 
 // Importa a lógica de carregamento da página
 import { pageLoad } from "./modules/page-load.js"
